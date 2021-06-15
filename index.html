@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>reveal.js</title>
+  <title>CSS Grid Layout</title>
 
   <link rel="stylesheet" href="dist/reset.css">
   <link rel="stylesheet" href="dist/reveal.css">
@@ -260,6 +260,63 @@
           }
         </code></pre>
         <img src="./assets/guters.png" alt="">
+      </section>
+      <section>
+        <section>
+          <p><span class="emphasis">Nesting</span> grids</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .box1 {
+              grid-column-start: 1;
+              grid-column-end: 4;
+              grid-row-start: 1;
+              grid-row-end: 3;
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+            }
+          </code></pre>
+          <img src="./assets/nesting.png" alt="">
+        </section>
+        <section>
+          <p><span class="emphasis">Subgrid</span></p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .box1 {
+              grid-column-start: 1;
+              grid-column-end: 4;
+              grid-row-start: 1;
+              grid-row-end: 3;
+              display: grid;
+              grid-template-columns: subgrid;
+            }
+          </code></pre>
+        </section>
+        <section>
+          <p>Layering items with <span class="emphasis">z-index</span></p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .box1 {
+              grid-column-start: 1;
+              grid-column-end: 4;
+              grid-row-start: 1;
+              grid-row-end: 3;
+              z-index: 2;
+            }
+
+            .box2 {
+              grid-column-start: 1;
+              grid-row-start: 2;
+              grid-row-end: 4;
+              z-index: 1;
+            }
+          </code></pre>
+        </section>
+        <section>
+          <p> If we give box2 a lower z-index than box1 it will display below box1 in the stack.</p>
+          <img src="./assets/zindex.png" alt="">
+        </section>
+      </section>
+      <section>
+        <h3>
+          <span class="emphasis">THANKS</span>
+        </h3>
       </section>
     </div>
   </div>
