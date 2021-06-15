@@ -22,30 +22,33 @@
         <p>CSS <span class="emphasis">Grid</span> Layout</p>
       </section>
       <section>
-        <ul>
-          <li>table</li>
-          <li>float</li>
-          <li>flexbox</li>
-          <li><span class="emphasis">CSS Grid Layout</span></li>
-        </ul>
-      </section>
-      <section>
-        <p>History</p>
-        <ul>
-          <li>1996 "frame-based" layout model</li>
-          <li>2005 <a href="https://www.w3.org/TR/2007/WD-css3-layout-20070809/">Advanced Layout Module</a></li>
-          <li>2012 <a href="https://www.w3.org/TR/2011/WD-css3-grid-layout-20110407/">draft Grid Layout spec</a></li>
-          <li>2017 major browsers support an implementation of CSS Grid</li>
-        </ul>
-      </section>
-      <section>
-        <img src="./assets/can-i-use.png" alt="">
-        <ul>
-          <li><span class="emphasis">95.45%</span> of browsers are supported globally</li>
-          <li>
-            If your app supports <span class="emphasis">IE</span> you can use <span class="emphasis">autoprefixer</span>
-          </li>
-        </ul>
+        <section>
+          <ul>
+            <li>table</li>
+            <li>float</li>
+            <li>flexbox</li>
+            <li><span class="emphasis">CSS Grid Layout</span></li>
+          </ul>
+        </section>
+        <section>
+          <p>History</p>
+          <ul>
+            <li>1996 "frame-based" layout model</li>
+            <li>2005 <a href="https://www.w3.org/TR/2007/WD-css3-layout-20070809/">Advanced Layout Module</a></li>
+            <li>2012 <a href="https://www.w3.org/TR/2011/WD-css3-grid-layout-20110407/">draft Grid Layout spec</a></li>
+            <li>2017 major browsers support an implementation of CSS Grid</li>
+          </ul>
+        </section>
+        <section>
+          <img src="./assets/can-i-use.png" alt="">
+          <ul>
+            <li><span class="emphasis">95.45%</span> of browsers are supported globally</li>
+            <li>
+              If your app supports <span class="emphasis">IE</span> you can use <span
+                class="emphasis">autoprefixer</span>
+            </li>
+          </ul>
+        </section>
       </section>
       <section>
         <img src="./assets/grid.png" alt="" style="width: 800px; height: 400px;">
@@ -57,29 +60,206 @@
         </ul>
       </section>
       <section>
-        <p>Grid has the following functions:</p>
-        <ul>
-          <li>Fixed and flexible track sizes</li>
-          <li>Item placement</li>
-          <li>Creation of additional tracks to hold content</li>
-          <li>Alignment control</li>
-          <li>Control of overlapping content</li>
-        </ul>
+        <section>
+          <p>Grid has the following <span class="emphasis">functions</span>:</p>
+          <ul>
+            <li>Fixed and flexible track sizes</li>
+            <li>Item placement</li>
+            <li>Creation of additional tracks to hold content</li>
+            <li>Alignment control</li>
+            <li>Control of overlapping content</li>
+          </ul>
+        </section>
+        <section>
+          <h6>Fixed and flexible track sizes</h6>
+          <p>You can create a grid with <span class="emphasis">fixed</span> track sizes – using <span
+              class="emphasis">pixels</span> for example. This sets the grid to the
+            specified pixel which fits to the layout you desire. You can also create a grid using <span
+              class="emphasis">flexible</span> sizes with
+            <span class="emphasis">percentages</span> or with the new <span class="emphasis">fr</span> unit designed for
+            this purpose
+          </p>
+        </section>
+        <section>
+          <h6>Item placement</h6>
+          <p>You can place items into a precise location on the grid using <span class="emphasis">line numbers, names or
+              by targeting an area
+              of the grid</span>. Grid also contains <span class="emphasis">an algorithm to control</span> the placement
+            of items not given an explicit
+            position on the grid</p>
+        </section>
+        <section>
+          <h6>Creation of additional tracks to hold content</h6>
+          <p>You can define an explicit grid with grid layout. The Grid Layout specification is flexible enough to <span
+              class="emphasis">add
+              additional rows and columns</span> when needed. Features such as adding “as many columns that will fit
+            into a
+            container” are included</p>
+        </section>
+        <section>
+          <h6>Alignment control</h6>
+          <p>Grid contains <span class="emphasis">alignment features </span>so we can control how the items align once
+            placed into a grid area, and
+            how the entire grid is aligned</p>
+        </section>
+        <section>
+          <h6>Control of overlapping content</h6>
+          <p><span class="emphasis">More than one item</span> can be placed into a grid cell or area and, they can
+            partially overlap each other. This
+            layering may then be controlled with the z-index property.</p>
+        </section>
       </section>
       <section>
-        <p>First, create a grid container</p>
-        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-          <div class="wrapper">
-            <div>One</div>
-            <div>Two</div>
-            <div>Three</div>
-          </div>
+        <section>
+          <p>The Grid <span class="emphasis">container</span></p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            <div class="wrapper">
+              <div>One</div>
+              <div>Two</div>
+              <div>Three</div>
+              <div>Four</div>
+              <div>Five</div>
+            </div>
         </code></pre>
-        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
           .wrapper {
             display: grid;
           }
         </code></pre>
+          <img src="./assets/container.png" width="600px" alt="">
+        </section>
+        <section>
+          <p>At this point, you may find it useful to work with the <span class="emphasis">Grid Inspector</span>,
+            available as part of Developer
+            Tools. You can see a small icon next to
+            the value grid. Click this and then the grid on this element will be overlaid in the browser window.</p>
+          <img src="./assets//tools.png" alt="">
+        </section>
+      </section>
+      <section>
+        <section>
+          <p>Grid <span class="emphasis">tracks</span></p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            <div class="wrapper">
+              <div>One</div>
+              <div>Two</div>
+              <div>Three</div>
+              <div>Four</div>
+              <div>Five</div>
+            </div>
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+              .wrapper {
+                display: grid;
+                grid-template-columns: 200px 200px 200px;
+              }
+          </code></pre>
+          <img src="./assets/basic-track.png" alt="">
+        </section>
+        <section>
+          <p>The <span class="emphasis">fr</span> unit</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .wrapper {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+            }
+          </code></pre>
+          <img src="./assets/tr-tracks.png" alt="">
+        </section>
+        <section>
+          <p>Track listings with <span class="emphasis">repeat()</span> notation</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .wrapper {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+            }
+          </code></pre>
+          <img src="./assets/tr-tracks.png" alt="">
+        </section>
+        <section>
+          <p>The <span class="emphasis">implicit</span> and explicit grid</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+              .wrapper {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: 200px;
+              }
+            </code></pre>
+          <img src="./assets/impl-traks.png" alt="">
+        </section>
+        <section>
+          <p>Track sizing and <span class="emphasis"> minmax</span></p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .wrapper {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              grid-auto-rows: minmax(100px, auto);
+            }
+          </code></pre>
+          <img src="./assets//minmax-tracks.png" alt="">
+        </section>
+      </section>
+      <section>
+        <section>
+          <p>Grid <span class="emphasis">lines </span></p>
+          <p style="font-size: 25px;">When we define a grid we define the grid tracks, not the lines. Grid then gives us
+            <span class="emphasis">numbered lines</span> to use when positioning items
+          </p>
+          <img src="./assets/lins.png" alt="">
+        </section>
+        <section>
+          <p>Positioning items against lines</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            <div class="wrapper">
+              <div class="box1">One</div>
+              <div class="box2">Two</div>
+              <div class="box3">Three</div>
+              <div class="box4">Four</div>
+              <div class="box5">Five</div>
+            </div>
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .box1 {
+              grid-column-start: 1;
+              grid-column-end: 4;
+              grid-row-start: 1;
+              grid-row-end: 3;
+            }
+
+            .box2 {
+              grid-column-start: 1;
+              grid-row-start: 3;
+              grid-row-end: 5;
+            }
+          </code></pre>
+        </section>
+        <section>
+          <img src="./assets/posit.png" alt="">
+        </section>
+      </section>
+      <section>
+        <section>
+          <p>Grid <span class="emphasis"> cells</span></p>
+          <p>A grid cell is the smallest unit on a grid. Conceptually it is like a table cell</p>
+          <img src="./assets/cells.png" alt="">
+        </section>
+        <section>
+          <p>Grid<span class="emphasis"> areas</span></p>
+          <p>Items can span one or more cells both by row or by column, and this creates a grid area</p>
+          <img src="./assets/area.png" alt="">
+        </section>
+      </section>
+      <section>
+        <p><span class="emphasis">Gutters</span></p>
+        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+          .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 10px;
+            row-gap: 1em;
+          }
+        </code></pre>
+        <img src="./assets/guters.png" alt="">
       </section>
     </div>
   </div>
